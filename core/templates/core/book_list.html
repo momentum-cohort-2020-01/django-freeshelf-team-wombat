@@ -2,10 +2,10 @@
 {% block content %}
 <h1>Hello World</h1>
 {% for book in books %}
-<div>
+<div class="book">
     <h3>{{ book.title }}</h3>
-    <h4>{{ book.author }}</h4>
-    <p>{{ book.description }} <br>To learn more about this book visit <a href="{{ book.website }}"> {{ book.website }}</a></p>
+    <!-- <h4>{{ book.author }}</h4>
+    <p>{{ book.description }} <br>To learn more about this book visit <a href="{{ book.website }}"> {{ book.website }}</a></p> -->
 </div>
 {% endfor %}
 {% endblock content %}
