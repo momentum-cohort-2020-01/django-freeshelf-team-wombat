@@ -1,8 +1,12 @@
 let bookSelector = document.querySelectorAll(".book")
-let bookSorter = []
-let title = 0
+let titleSelector = document.querySelectorAll(".title")
+let authorSelector = document.querySelectorAll(".author")
+let descriptionSelector = document.querySelectorAll(".description")
 
-function test() {
+let bookSorter = []
+let num = 0
+
+function sortAtoZ() {
     for (let book of bookSelector) {
         bookSorter.push(book.firstElementChild.innerText)
         bookSorter.sort(function (a, b) {
@@ -11,7 +15,18 @@ function test() {
     }
     for (let book of bookSelector) {
         book.firstElementChild.innerText = bookSorter[title]
-        title += 1
+        num += 1
+    }
+}
+
+// sortAToZ()
+
+function test() {
+    for (let book of bookSelector){
+        bookSorter.push({})
+    }
+    for (let title of titleSelector) {
+        bookSorter[0]
     }
 }
 
