@@ -9,6 +9,8 @@ prospector = "*"
 [packages]
 django = "*"
 django-extensions = "*"
+extensions = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.7"
