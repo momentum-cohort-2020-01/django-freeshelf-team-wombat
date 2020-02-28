@@ -5,7 +5,8 @@
 <div class="book">
     <h3 class="title">{{ book.title }}</h3>
     <h4 class="author">{{ book.author }}</h4>
-    <p class="description">{{ book.description }} <br>To learn more about this book visit <a href="{{ book.website }}"> {{ book.website }}</a></p>
+    <p class="description">{{ book.description }}</p>
+    <p>To learn more about this book visit <a class="url" href="{{ book.website }}"> {{ book.website }}</a></p>
 </div>
 {% endfor %}
 {% endblock content %}
