@@ -3,7 +3,14 @@
 {% block content%}
 
 <div>
-    
+    {{book.title}}
+    {{book.author}}
+    {{book.description}}
+    {{book.url}}
 </div>
-
+<div>
+    <a href="{% url 'edit-book', pk=book.pk" class='button'>Edit Book</a>
+    <a href="{% url 'delete-book', pk=book.pk" class='button'>Delete Book</a>
+    <a href="{% url 'book-list' %}" class='button'>Home</a>
+</div>
 {% endblock %}
