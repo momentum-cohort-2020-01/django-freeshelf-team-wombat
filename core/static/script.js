@@ -3,12 +3,14 @@ let titleSelector = document.querySelectorAll(".title")
 let authorSelector = document.querySelectorAll(".author")
 let descriptionSelector = document.querySelectorAll(".description")
 let urlSelector = document.querySelectorAll(".url")
+let categorySelector = document.querySelectorAll(".category")
+let addedSelector = document.querySelectorAll(".added")
 
 
 let bookSorter = []
 let num = 0
 
-function test() {
+function sortAlphabetical(arg) {
     num = 0
     for (let book of bookSelector) {
         bookSorter.push({title: "", author: "", description: "", url: ""})
@@ -32,16 +34,36 @@ function test() {
         bookSorter[num]["url"] = url.innerText
         num += 1
     }
+    num = 0
+    for (let category of categorySelector) {
+        bookSorter[num]["category"] = category.innerText
+        num += 1
+    }
+    num = 0
+    for (let added of addedSelector) {
+        bookSorter[num]["added"] = added.innerText
+        num += 1
+    }
 
-    bookSorter.sort(compare)
-    booksToDom()
+    bookSorter.sort(arg)
+    // booksToDom()
 }
 
-function compare(a, b) {
+function alphabetical(a, b) {
     if (a.title.toLowerCase() < b.title.toLowerCase()) {
         return -1
     }
     if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        return 1
+    }
+    return 0
+}
+
+function reverseAlphatical(a, b) {
+    if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        return -1
+    }
+    if (a.title.toLowerCase() < b.title.toLowerCase()) {
         return 1
     }
     return 0
@@ -69,6 +91,14 @@ function booksToDom() {
         url.setAttribute("href", bookSorter[num]['url'])
         num += 1
     }
+    num = 0
+    for (let category of categorySelector) {
+        category.innerText = bookSorter[num]['category']
+        num += 1
+    }
+    num = 0
+    for (let added of addedSelector) {
+        added.innerText = bookSorter[num]['added']
+        num += 1
+    }
 }
-
-// test()
