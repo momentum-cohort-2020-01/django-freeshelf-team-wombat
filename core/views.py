@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 
 from .models import Book, Category
-from .form import BookForm
+from .forms import BookForm
 
 
 def book_list(request):
