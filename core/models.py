@@ -12,6 +12,7 @@ class Book(models.Model):
     url = models.URLField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey("Category", on_delete=models.DO_NOTHING, null=True, blank=True)
+    book_image = models.CharField(max_length= 500, null=True, blank=True)
 
     def __str__(self):
         return f'Book title: {self.title} Author: {self.author} Description: {self.description} website: {self.url}'
