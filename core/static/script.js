@@ -68,11 +68,21 @@ function reverseAlphatical(a, b) {
     return 0
 }
 
-function alphabetize (arg) {
+function sortAlphabetical (arg) {
     bookSorter = []
     sorter(bookSorter)
     bookSorter.sort(arg)
     booksToDom(bookSorter)
+}
+
+function sortAdded (arg) {
+    bookSorter = defaultSorter
+    if (arg === true) {
+        booksToDom(bookSorter.reverse())
+    }
+    else {
+        booksToDom(bookSorter)
+    }
 }
 
 function booksToDom(arg) {
