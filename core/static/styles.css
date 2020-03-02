@@ -10,7 +10,6 @@
     padding: 5px;
     background-color: #3E276D;
     color: #F1FFE7;
-    border-bottom: 10px;
 }
 
 .book {
@@ -82,4 +81,19 @@
 .flexbox {
     display: flex;
     align-items: center;
+}
+
+.logout {
+    display: inline-block;
+    float: right;
+    margin: 5px;
+}
+
+.link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    background-color: #99B2DD;
 }

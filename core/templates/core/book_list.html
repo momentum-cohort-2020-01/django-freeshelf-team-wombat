@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="freeshelf">Freeshelf</h1>
 <div>
     <p class="sort">sort:</p>
     <button class='button-selected' id='date-added'>Date Added</button>
     <button class='button' id='reverse-date-added'>Reverse Date Added</button>
     <button class='button' id='alphabetical'>Alphabetical</button>
     <button class='button' id='reverse-alphabetical'>Reverse Alphabetical</button>
+    <p class="logout"><a href="http://127.0.0.1:8000/accounts/logout/">logout</a></p>
 </div>
 {% for book in books %}
 <div class="book">
@@ -19,7 +19,7 @@
     </div>
     <p class="description">{{ book.description }}</p>
     <p class="info">To learn more about this book visit <a class="url" href="{{ book.url }}"> {{ book.url }}</a></p>
-    <p class='category'>{{ book.category}}</p>
+    <p class='category'><a class="link" href="http://127.0.0.1:8000/book/{{ book.category}}/">{{ book.category}}</a></p>
     <p class="added">Added: {{book.created_at}}</p>
 </div>
 {% endfor %}
