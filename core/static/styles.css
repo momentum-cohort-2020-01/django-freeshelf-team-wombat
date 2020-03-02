@@ -49,6 +49,18 @@
     font-size: .75rem;
     margin-top: 5px;
     margin-bottom:5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+
+.category2 {
+    font-size: .75rem;
+    margin-top: 5px;
+    margin-bottom:5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 8px;
 }
 
 .description {
@@ -97,6 +109,18 @@
     font-size: .75rem;
 }
 
-a:hover {
-    background-color: #99B2DD;
+.link2 {
+    color: inherit;
+    text-decoration: inherit;
+    border: solid 1px;
+    padding: 1px;
+    margin: 1px;
+    width: fit-content;
+    border-radius: 3px;
+    background-color: white;
+    font-size: .75rem;
+}
+
+.link:hover {
+    background-color:#5E3575;
 }

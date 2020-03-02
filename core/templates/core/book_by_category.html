@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div>
+    <p class="sort">sort:</p>
+    <button class='button-selected' id='date-added'>Date Added</button>
+    <button class='button' id='reverse-date-added'>Reverse Date Added</button>
+    <button class='button' id='alphabetical'>Alphabetical</button>
+    <button class='button' id='reverse-alphabetical'>Reverse Alphabetical</button>
+    <p class="logout"><a href="http://127.0.0.1:8000/accounts/logout/">logout</a></p>
+    <p class="logout"><a href="{% url 'new-book' %}">new book</a></p>
+</div>
 <h1>Books by category: {{category.name}}</h1>
 {% for book in books %}
 <div class="book">
