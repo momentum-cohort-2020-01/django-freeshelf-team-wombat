@@ -17,7 +17,7 @@ let num = 0
 function sorter(arg) {
     num = 0
     for (let book of bookSelector) {
-        arg.push({title: "", author: "", description: "", url: ""})
+        arg.push({title: ""})
     }
     for (let title of titleSelector) {
         arg[num]["title"] = title.innerText
