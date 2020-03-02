@@ -125,18 +125,50 @@ function booksToDom(arg) {
 
 alphabeticalButton.addEventListener("click", function() {
     sortAlphabetical(alphabetical)
+    dateAddedButton.classList.remove("button-selected")
+    dateAddedButton.classList.add("button")
+    alphabeticalButton.classList.remove("button")
+    alphabeticalButton.classList.add("button-selected")
+    reverseAlphabeticalButton.classList.remove("button-selected")
+    reverseAlphabeticalButton.classList.add("button")
+    reverseDateAddedButton.classList.remove("button-selected")
+    reverseDateAddedButton.classList.add("button")
 })  
 
 reverseAlphabeticalButton.addEventListener("click", function() {
     sortAlphabetical(reverseAlphabetical)
+    dateAddedButton.classList.remove("button-selected")
+    dateAddedButton.classList.add("button")
+    alphabeticalButton.classList.remove("button-selected")
+    alphabeticalButton.classList.add("button")
+    reverseAlphabeticalButton.classList.remove("button")
+    reverseAlphabeticalButton.classList.add("button-selected")
+    reverseDateAddedButton.classList.remove("button-selected")
+    reverseDateAddedButton.classList.add("button")
 })  
 
 dateAddedButton.addEventListener("click", function() {
     sortAdded(true)
+    dateAddedButton.classList.remove("button")
+    dateAddedButton.classList.add("button-selected")
+    alphabeticalButton.classList.remove("button-selected")
+    alphabeticalButton.classList.add("button")
+    reverseAlphabeticalButton.classList.remove("button-selected")
+    reverseAlphabeticalButton.classList.add("button")
+    reverseDateAddedButton.classList.remove("button-selected")
+    reverseDateAddedButton.classList.add("button")
 })  
 
 reverseDateAddedButton.addEventListener("click", function() {
     sortAdded(false)
+    dateAddedButton.classList.remove("button-selected")
+    dateAddedButton.classList.add("button")
+    alphabeticalButton.classList.remove("button-selected")
+    alphabeticalButton.classList.add("button")
+    reverseAlphabeticalButton.classList.remove("button-selected")
+    reverseAlphabeticalButton.classList.add("button")
+    reverseDateAddedButton.classList.remove("button")
+    reverseDateAddedButton.classList.add("button-selected")
 })  
 
 sorter(defaultSorter)
