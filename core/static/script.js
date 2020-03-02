@@ -5,8 +5,12 @@ let descriptionSelector = document.querySelectorAll(".description")
 let urlSelector = document.querySelectorAll(".url")
 let categorySelector = document.querySelectorAll(".category")
 let addedSelector = document.querySelectorAll(".added")
+let alphabeticalButton = document.querySelector("#alphabetical")
+let reverseAlphabeticalButton = document.querySelector("#reverse-alphabetical")
+let dateAddedButton = document.querySelector("#date-added")
+let reverseDateAddedButton = document.querySelector("#reverse-date-added")
 
-const defaultSorter = []
+let defaultSorter = []
 let bookSorter = []
 let num = 0
 
@@ -58,7 +62,7 @@ function alphabetical(a, b) {
     return 0
 }
 
-function reverseAlphatical(a, b) {
+function reverseAlphabetical(a, b) {
     if (a.title.toLowerCase() > b.title.toLowerCase()) {
         return -1
     }
@@ -77,8 +81,8 @@ function sortAlphabetical (arg) {
 
 function sortAdded (arg) {
     bookSorter = defaultSorter
-    if (arg === true) {
-        booksToDom(bookSorter.reverse())
+    if (arg === false) {
+        booksToDom(bookSorter.slice(0).reverse())
     }
     else {
         booksToDom(bookSorter)
@@ -118,5 +122,21 @@ function booksToDom(arg) {
         num += 1
     }
 }
+
+alphabeticalButton.addEventListener("click", function() {
+    sortAlphabetical(alphabetical)
+})  
+
+reverseAlphabeticalButton.addEventListener("click", function() {
+    sortAlphabetical(reverseAlphabetical)
+})  
+
+dateAddedButton.addEventListener("click", function() {
+    sortAdded(true)
+})  
+
+reverseDateAddedButton.addEventListener("click", function() {
+    sortAdded(false)
+})  
 
 sorter(defaultSorter)

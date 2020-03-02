@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Freeshelf</h1>
+<div>
+    <p>SORT:</p>
+    <button class='button' id='alphabetical'>Alphabetical</button>
+    <button class='button' id='reverse-alphabetical'>Reverse Alphabetical</button>
+    <button class='button' id='date-added'>Date Added</button>
+    <button class='button' id='reverse-date-added'>Reverse Date Added</button>
+<div></div>
 {% for book in books %}
 <div class="book">
     <h3 class="title">{{ book.title }}</h3>
