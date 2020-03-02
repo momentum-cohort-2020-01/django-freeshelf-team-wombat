@@ -46,13 +46,9 @@
 }
 
 .category {
-    border: solid 1px;
-    padding: 1px;
-    margin: 1px;
-    width: fit-content;
-    border-radius: 3px;
-    background-color: white;
     font-size: .75rem;
+    margin-top: 5px;
+    margin-bottom:5px;
 }
 
 .description {
@@ -92,6 +88,13 @@
 .link {
     color: inherit;
     text-decoration: inherit;
+    border: solid 1px;
+    padding: 1px;
+    margin: 1px;
+    width: fit-content;
+    border-radius: 3px;
+    background-color: white;
+    font-size: .75rem;
 }
 
 a:hover {

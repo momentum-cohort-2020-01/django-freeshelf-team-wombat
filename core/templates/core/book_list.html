@@ -19,7 +19,7 @@
     </div>
     <p class="description">{{ book.description }}</p>
     <p class="info">To learn more about this book visit <a class="url" href="{{ book.url }}"> {{ book.url }}</a></p>
-    <p class='category'><a class="link" href="http://127.0.0.1:8000/book/{{ book.category}}/">{{ book.category}}</a></p>
+    <p class='category'>Categories: <a class="link" href="http://127.0.0.1:8000/book/{{ book.category}}/">{{ book.category}}</a></p>
     <p class="added">Added: {{book.created_at}}</p>
 </div>
 {% endfor %}
