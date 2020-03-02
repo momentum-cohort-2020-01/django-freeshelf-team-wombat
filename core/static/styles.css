@@ -76,4 +76,10 @@
 
 .book-image {
     height: 100px;
+    margin-left: 10px;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
 }

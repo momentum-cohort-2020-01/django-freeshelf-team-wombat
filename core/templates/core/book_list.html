@@ -10,9 +10,13 @@
 </div>
 {% for book in books %}
 <div class="book">
-    <h3 class="title">{{ book.title }}</h3>
-    <h4 class="author">{{ book.author }}</h4>
-    <img class="book-image" src="{{ book.book_image }}">
+    <div class="flexbox">
+        <div>
+            <h3 class="title">{{ book.title }}</h3>
+            <h4 class="author">{{ book.author }}</h4>
+        </div>
+        <img class="book-image" src="{{ book.book_image }}">
+    </div>
     <p class="description">{{ book.description }}</p>
     <p class="info">To learn more about this book visit <a class="url" href="{{ book.url }}"> {{ book.url }}</a></p>
     <p class='category'>{{ book.category}}</p>
