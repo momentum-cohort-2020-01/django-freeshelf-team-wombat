@@ -18,6 +18,7 @@ from django.urls import path, include
 from core import views
 
 urlpatterns = [
+    path('', include('django.contrib.auth.urls')),
     path('', views.book_list, name='book-list'),
     path('book/new', views.new_book, name='new-book'),
     path('book/<int:pk>/', views.book_detail, name='book-detail'),
