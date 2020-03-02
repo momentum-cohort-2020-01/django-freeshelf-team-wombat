@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/heathermccormick/.local/share/virtualenvs/django-freeshelf-RzmidssR/bin/python",
+    "python.pythonPath": "Users/rconley/.virtualenvs/django-todos-in-class-8BB3TG5o/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.prospectorEnabled": true,
     "python.linting.enabled": true
