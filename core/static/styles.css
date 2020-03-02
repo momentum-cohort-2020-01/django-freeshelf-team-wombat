@@ -3,8 +3,44 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    background-color: #D6E3F8;
+}
+
+.freeshelf {
+    padding: 3px;
+    background-color: #5386E4;
+    color: #D6E3F8;
 }
 
 .book {
     border: solid 1px;
+    padding: 5px;
 }
+
+.button {
+    border: transparent;
+    background-color: lightgray;
+    padding: 3px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button-selected {
+    border: solid 1px;
+    background-color: #A9E4EF;
+    padding: 3px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.sort {
+    display: inline-block;
+    margin-left: 8px;
+}
+
