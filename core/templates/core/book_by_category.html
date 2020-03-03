@@ -1,8 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>These are {{category.name}} Books</h1>
+<div>
+    <p class="sort">sort:</p>
+    <button class='button-selected' id='date-added'>Date Added</button>
+    <button class='button' id='reverse-date-added'>Reverse Date Added</button>
+    <button class='button' id='alphabetical'>Alphabetical</button>
+    <button class='button' id='reverse-alphabetical'>Reverse Alphabetical</button>
+    <p class="logout"><a href="http://127.0.0.1:8000/accounts/logout/">logout</a></p>
+    <p class="logout"><a href="{% url 'new-book' %}">new book</a></p>
+</div>
+<h1>Books by category: {{category.name}}</h1>
 {% for book in books %}
-<ul>{{book}}</ul>
+<div class="book">
+    <div class="flexbox">
+        <div>
+            <h3 class="title">{{ book.title }}</h3>
+            <h4 class="author">{{ book.author }}</h4>
+        </div>
+        <img class="book-image" src="{{ book.book_image }}">
+    </div>
+    <p class="description">{{ book.description }}</p>
+    <p class="info">To learn more about this book visit <a class="url" href="{{ book.url }}"> {{ book.url }}</a></p>
+    <p class='category'>{{ book.category}}</p>
+    <p class="added">Added: {{book.created_at}}</p>
+</div>
 {% endfor %}
 {% endblock %}

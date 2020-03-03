@@ -3,14 +3,13 @@
     padding: 0;
     font-family: arial, sans-serif;
     box-sizing: border-box;
-    background-color: #F9F9F9;
+    background-color: #FCFCFC;
 }
 
 .freeshelf {
     padding: 5px;
     background-color: #3E276D;
     color: #F1FFE7;
-    border-bottom: 10px;
 }
 
 .book {
@@ -47,13 +46,21 @@
 }
 
 .category {
-    border: solid 1px;
-    padding: 1px;
-    margin: 1px;
-    width: fit-content;
-    border-radius: 3px;
-    background-color: white;
     font-size: .75rem;
+    margin-top: 5px;
+    margin-bottom:5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+
+.category2 {
+    font-size: .75rem;
+    margin-top: 5px;
+    margin-bottom:5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 8px;
 }
 
 .description {
@@ -82,4 +89,42 @@
 .flexbox {
     display: flex;
     align-items: center;
+}
+
+.logout {
+    display: inline-block;
+    float: right;
+    margin: 5px;
+}
+
+.link {
+    color: inherit;
+    text-decoration: inherit;
+    border: solid 1px;
+    padding: 1px;
+    margin: 1px;
+    width: fit-content;
+    border-radius: 3px;
+    background-color: white;
+    font-size: .75rem;
+}
+
+.link2 {
+    color: inherit;
+    text-decoration: inherit;
+    border: solid 1px;
+    padding: 1px;
+    margin: 1px;
+    width: fit-content;
+    border-radius: 3px;
+    background-color: white;
+    font-size: .75rem;
+}
+
+.link:hover {
+    background-color:#5E3575;
+}
+
+.link2:hover {
+    background-color: #5E3575;
 }

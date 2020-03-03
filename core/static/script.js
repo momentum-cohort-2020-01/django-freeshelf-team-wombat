@@ -5,6 +5,8 @@ let descriptionSelector = document.querySelectorAll(".description")
 let urlSelector = document.querySelectorAll(".url")
 let categorySelector = document.querySelectorAll(".category")
 let addedSelector = document.querySelectorAll(".added")
+let bookImageSelector = document.querySelectorAll(".book-image")
+let linkSelector = document.querySelectorAll(".link")
 let alphabeticalButton = document.querySelector("#alphabetical")
 let reverseAlphabeticalButton = document.querySelector("#reverse-alphabetical")
 let dateAddedButton = document.querySelector("#date-added")
@@ -40,7 +42,12 @@ function sorter(arg) {
     }
     num = 0
     for (let category of categorySelector) {
-        arg[num]["category"] = category.innerText
+        arg[num]["category"] = category.innerHTML
+        num += 1
+    }
+    num = 0
+    for (let link of linkSelector) {
+        arg[num]["link"] = link.href
         num += 1
     }
     num = 0
@@ -48,8 +55,11 @@ function sorter(arg) {
         arg[num]["added"] = added.innerText
         num += 1
     }
-    // bookSorter.sort(arg)
-    // booksToDom()
+    num = 0
+    for (let image of bookImageSelector) {
+        arg[num]["book-image"] = image.src
+        num += 1
+    }
 }
 
 function alphabetical(a, b) {
@@ -113,12 +123,22 @@ function booksToDom(arg) {
     }
     num = 0
     for (let category of categorySelector) {
-        category.innerText = arg[num]['category']
+        category.innerHTML = arg[num]['category']
+        num += 1
+    }
+    num = 0
+    for (let link of linkSelector) {
+        link.href = arg[num]['link']
         num += 1
     }
     num = 0
     for (let added of addedSelector) {
         added.innerText = arg[num]['added']
+        num += 1
+    }
+    num = 0
+    for (let image of bookImageSelector) {
+        image.src = arg[num]['book-image']
         num += 1
     }
 }
